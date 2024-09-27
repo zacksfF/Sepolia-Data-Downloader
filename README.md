@@ -42,15 +42,15 @@ The purpose of this project is to efficiently download and store data from the S
 
 Before you can use this tool, make sure you have the following installed:
 
-- Go (Golang) v1.17 or higher
+- Go (Golang) v1.22 or higher
 - LevelDB
 - An Infura account (to get an Ethereum node endpoint for Sepolia)
 
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/sepolia-downloader.git
-cd sepolia-downloader
+git clone https://github.com/zacksfF/Sepolia-Data-Downloader.git
+cd Sepolia-Data-Downloader
 ```
 
 ### Install Dependencies
@@ -65,7 +65,7 @@ go mod tidy
 
 Ensure you have access to the Sepolia network through Infura:
 
-- Replace the Infura project ID in the `eth/client.go` file:
+- Replace the Infura project ID in the `client/ethereum.go` file:
 
 ```go
 client, err := ethclient.Dial("https://sepolia.infura.io/v3/YOUR_INFURA_PROJECT_ID")
@@ -76,7 +76,7 @@ client, err := ethclient.Dial("https://sepolia.infura.io/v3/YOUR_INFURA_PROJECT_
 You can build the project by running:
 
 ```bash
-go build -o sepolia-downloader
+go build -o Sepolia-Data-Downloader
 ```
 
 ## Usage
@@ -84,7 +84,7 @@ go build -o sepolia-downloader
 After building the application, run it as follows:
 
 ```bash
-./sepolia-downloader
+./Sepolia-Data-Downloader
 ```
 
 The tool will connect to the Sepolia testnet, query for logs from the specified contract and topic, and store the L1 info root data, block time, and parent hash in LevelDB.
