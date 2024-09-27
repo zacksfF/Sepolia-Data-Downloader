@@ -68,7 +68,7 @@ Ensure you have access to the Sepolia network through Infura:
 - Replace the Infura project ID in the `client/ethereum.go` file:
 
 ```go
-client, err := ethclient.Dial("https://sepolia.infura.io/v3/YOUR_INFURA_PROJECT_ID")
+client, err := ethclient.Dial("https://sepolia.infura.io/v3/createAccountAndMaketheAPiHere.......")
 ```
 
 ### Build the Application
